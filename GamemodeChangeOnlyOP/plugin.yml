@@ -1,0 +1,8 @@
+name: GamemodeChangeOnlyOP
+main: popkechupki\main
+version: 0.1
+api: [1.13.0,2.0.0]
+load: POSTWORLD
+author: popkechupki
+authors: [Sunshine]
+description: "OP以外がゲームモードを変更しようとすると警告文が流れて変更しようとしたプレイヤーの処理をキャンセルしkick(Configで設定可)します。"
