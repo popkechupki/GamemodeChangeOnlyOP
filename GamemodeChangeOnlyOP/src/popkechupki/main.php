@@ -34,7 +34,7 @@ class main extends PluginBase implements Listener{
 		$date = $this->config->get("Kick");
 		if ($date == true) {
 			if($player->isOP()){
-				$player->sendMessage("あなたがOPであることが確認されました。");
+				$player->sendMessage("[§b認証§r]あなたがOPであることが確認されました。");
 			}else{
 				$player->sendMessage("[§c警告§r] §aあなたはOPではないのでゲームモードの変更ができません。");
 				$this->getServer()->broadcastMessage("[§c警告§r] §b".$Name."§aがゲームモードを変更しようとしたのでKickしました。");
@@ -43,7 +43,7 @@ class main extends PluginBase implements Listener{
 			}
 		}else if ($date == false) {
 			if(!$player->isOP()){
-				$plyer->sendMessage("あなたがOPであることが確認されました。");
+				$plyer->sendMessage("[§b認証§r]あなたがOPであることが確認されました。");
 			}else{
 				$player->sendMessage("[§c警告§r] §aあなたはOPではないのでゲームモードの変更ができません。");
 				$this->getServer()->broadcastMessage("[§c警告§r] §b".$Name."§aがゲームモードを変更しようとしました。");
