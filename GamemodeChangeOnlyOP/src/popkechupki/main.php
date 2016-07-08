@@ -5,17 +5,14 @@ namespace popkechupki;
 use pocketmine\Server;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
-use pocketmine\utils\TextFormat;
-use pocketmine\utils\Config;
-use pocketmine\event\Listener;
+use pocketmine\utils\{TextFormat, Config};
+use pocketmine\event\{Listener, Cancellable};
 use pocketmine\event\player\PlayerGameModeChangeEvent;
-use pocketmine\event\Cancellable;
 
 class main extends PluginBase implements Listener{
 
 	public function onEnable(){
-        $plugin = "GamemodeChangeOnlyOP";                                
-        $this->getLogger()->info(TextFormat::GREEN.$plugin."を読み込みました".TextFormat::GOLD." By popkechupki");
+        $this->getLogger()->info(TextFormat::GREEN."GamemodeChangeOnlyOPを読み込みました".TextFormat::GOLD." By popkechupki");
         $this->getLogger()->info(TextFormat::RED."このプラグインはpopke LICENSEに同意した上で使用してください。");
 
         if (!file_exists($this->getDataFolder())) @mkdir($this->getDataFolder(), 0740, true);
@@ -28,7 +25,7 @@ class main extends PluginBase implements Listener{
         $this->getServer()->getPluginManager()->registerEvents($this,$this); 
     } 
 
-	public function GamemodeChange(PlayerGameModeChangeEvent $event){
+	function GamemodeChange(PlayerGameModeChangeEvent $event){
 		$player = $event->getPlayer();
 		$Name = $player->getName();
 		$date = $this->config->get("Kick");
