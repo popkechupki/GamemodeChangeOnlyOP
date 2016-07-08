@@ -3,9 +3,9 @@ Anti-Grieving plugin for PocketMine-MP.
 OP以外のゲームモード変更をキャンセル！
 使用する際には以下のライセンスに同意した上での使用をお願いします。
 ##How to use
-config.ymlのKickをtrueまたはfalseに設定してください。
-true:kickが有効になります。
-false:kickが無効になります。
+config.ymlのKickをtrueまたはfalseに設定してください。  
+true:kickが有効になります。  
+false:kickが無効になります。  
 ##popke LICENSE
 1.プラグインをサーバーで使用したとき、起動時にこのライセンスのことについて書かれている場合とGitHubにアップッロードされているプラグインを使用するときは、このライセンスに同意した上でこのプラグインを使用して下さい。
 
